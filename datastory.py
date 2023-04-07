@@ -10,7 +10,7 @@ df = pd.read_csv("savings_data.csv")
 
 # displaying a scatter plot to find the nature of the data 
 fig = px.scatter(df, y="quant_saved", color="female")
-# fig.show()
+fig.show()
 
 # finding mean, median and mode of the big data 
 avg = statistics.mean(df["quant_saved"])
@@ -75,10 +75,10 @@ print(f"female people savings mode: {statistics.mode(female)}")
 # the mean median and mode are still very far apart from each other 
 
 figure = go.Figure(go.Bar(x = ["wealthy", "not wealthy"], y = [total_people_wealthy, (total_entries - total_people_wealthy)]))
-# figure.show()
+figure.show()
 
 malefig = go.Figure(go.Bar(x = ["male, female"], y = [male_saved, (total_entries - male_saved)]))
-# malefig.show()
+malefig.show()
 
 # find the standard deviation 
 standard_deviation = statistics.stdev(df["quant_saved"])
